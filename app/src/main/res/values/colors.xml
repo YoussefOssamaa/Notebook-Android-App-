@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_light_primary">#651A1A</color>
+    <color name="my_night_primary">#651A1A</color>
+    <color name="black">#000000</color>
+    <color name="green">#1B952F</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#A59D9D</color>
+    <color name="dark_grey">#686262</color>
+
+</resources>
