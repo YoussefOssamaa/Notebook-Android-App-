@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Notebook</string>
+    <string name="Loginbtn">Login</string>
+    <string name="createBtnxml">Create</string>
+    <string name="confirm_pass_etxml">Confirm Password</string>
+    <string name="Hello_xml">Hello</string>
+    <string name="letsgetstarted_xml">Let\'s Get Started</string>
+    <string name="email_etxml">Email</string>
+    <string name="pass_etxml">Password</string>
+    <string name="loginxml">"Already have an account "</string>
+    <string name="welcomeback_xml">Welcome Back</string>
+    <string name="Donthaveaccount_xml">"Don't have an account "</string>
+    <string name="Add_note_et_xml">Add note</string>
+    <string name="title_et_xml">Title</string>
+    <string name="content_et_xml">Content</string>
+    <string name="Notes_et_xml">Notes</string>
 </resources>

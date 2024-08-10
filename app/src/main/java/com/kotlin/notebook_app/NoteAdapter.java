@@ -1,6 +1,7 @@
 package com.kotlin.notebook_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,10 +23,22 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note , NoteAdapter.Not
 
 
     @Override
-    protected void onBindViewHolder(@NonNull NoteViewHolder holder, int i, @NonNull Note note) {
+    protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position , @NonNull Note note) {
         holder.titleTextView.setText(note.title) ;
         holder.contentTextView.setText(note.content) ;
         holder.timestampTextView.setText(Utility.timestampToString(note.timestamp)) ;
+
+        //setting the edit note activity
+        holder.itemView.setOnClickListener(v->{
+
+            Intent intent = new Intent(context ,AddNoteActivity.class) ;
+            intent.putExtra("title" , note.title) ;
+            intent.putExtra("content" , note.content) ;
+
+            String docID = this.getSnapshots().getSnapshot(position).getId() ;
+            intent.putExtra("docID" , docID) ;
+            context.startActivity(intent);
+        });
     }
 
     @NonNull

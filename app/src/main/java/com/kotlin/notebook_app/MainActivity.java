@@ -4,8 +4,11 @@ import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton add_btn ;
     RecyclerView recyclerView ;
     ImageButton menuButton ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view_xml) ;
         menuButton = findViewById(R.id.menu_btn_xml) ;
 
+
         add_btn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this , AddNoteActivity.class)));
         menuButton.setOnClickListener(v-> showmenu());
         RecyclerViewSetup() ;
@@ -46,7 +51,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     void showmenu() {
-
+        PopupMenu popupMenu = new PopupMenu(MainActivity.this , menuButton ) ;
+        popupMenu.getMenu().add("Logout") ;
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getTitle() == "Logout"){
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
+                    return true ;
+                }
+                return false;
+            }
+        });
 
     }
 void RecyclerViewSetup() {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notebook</string>
+    <string name="Loginbtn">تسجيل الدخول</string>
+    <string name="createBtnxml">انشاء حساب</string>
+    <string name="confirm_pass_etxml">تأكيد كلمة السر</string>
+    <string name="Hello_xml">مرحبا</string>
+    <string name="letsgetstarted_xml">لنبدأ</string>
+    <string name="email_etxml">الحساب</string>
+    <string name="pass_etxml">كلمة السر</string>
+    <string name="loginxml">عندي حساب بالفعل | تسجيل الدخول</string>
+    <string name="welcomeback_xml">أهلا بك مجددا</string>
+    <string name="Donthaveaccount_xml">ليس لدي حساب | انشاء حساب</string>
+    <string name="Add_note_et_xml">اضافة مذكرة</string>
+    <string name="title_et_xml">العنوان</string>
+    <string name="content_et_xml">المحتوي</string>
+    <string name="Notes_et_xml">المذكرات</string>
+</resources>
